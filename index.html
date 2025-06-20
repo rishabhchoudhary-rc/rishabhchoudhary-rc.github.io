@@ -4,17 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rishabh Choudhary | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- Loading Screen -->
   <div id="loading">
-    <div class="loader-text">Since 1999</div>
+    <div class="loader-container">
+      <h1 class="loader-title">RC</h1>
+      <p class="loader-subtitle">SINCE 1999</p>
+    </div>
   </div>
 
-  <!-- Background Canvas for WebGL -->
+  <!-- Vanta Background -->
   <div id="vanta-bg"></div>
 
   <!-- Navigation -->
@@ -28,7 +35,7 @@
   <!-- Hero Section -->
   <section id="hero">
     <div class="hero-content">
-      <h1 id="animatedName" class="glitch-text"></h1>
+      <h1 id="animatedName" class="glitch-text-container"></h1>
       <p>Head of IT • Torero Corporation & Metropoli Fashions Pvt. Ltd</p>
     </div>
   </section>
@@ -46,25 +53,47 @@
       <li>Enterprise IT</li>
       <li>Cybersecurity</li>
       <li>Cloud Management</li>
-      <li>Networking</li>0
+      <li>Networking</li>
       <li>Automation</li>
       <li>Technical Support</li>
     </ul>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="fade-in">
-    <h2>Contact</h2>
-    <p>Let’s connect! I’d love to explore collaboration or opportunities.</p>
-    <a href="mailto:rishabh@metropolifashions.com">Email Me</a>
+  <section id="contact">
+    <div class="glass-box">
+      <h2>Contact</h2>
+      <p>Let’s connect! I’d love to explore collaboration or opportunities.</p>
+      <div class="buttons">
+        <a href="mailto:rishabh@metropolifashions.com">Email Me</a>
+        <a href="https://wa.link/pomhwo" target="_blank">WhatsApp</a>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>© 2025 Rishabh Choudhary — All Rights Reserved.</footer>
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+  <!-- Vanta HALO Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.halo.min.js"></script>
+  <script>
+    VANTA.HALO({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      backgroundColor: 0x02070a,  // matches your theme
+      amplitudeFactor: 2.0,
+      xOffset: 0.05,
+      yOffset: 0.05,
+      baseColor: 0x02c6b0       // accent color
+    });
+  </script>
+
+  <!-- Your Custom Script -->
   <script src="script.js"></script>
 </body>
 </html>
