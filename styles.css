@@ -1,20 +1,28 @@
-/* Reset and Base */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;700&display=swap');
+
+/* ===== BASE RESET ===== */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #02070A;
-  color: #FBFAF3;
+  background-color: #000000;
+  color: #FFFFFF;
   overflow-x: hidden;
   position: relative;
+  scroll-behavior: smooth;
 }
 
-/* Loading Screen */
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== LOADER ===== */
 #loading {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: #02070A;
+  background: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,11 +30,13 @@ body {
 }
 
 .loader-text {
-  font-size: 6rem;
-  font-weight: 600;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #FFFFFF;
 }
 
-/* Vanta Background */
+/* ===== VANTA BACKGROUND ===== */
 #vanta-bg {
   position: fixed;
   top: 0;
@@ -36,66 +46,73 @@ body {
   z-index: -1;
 }
 
-/* Navigation */
+/* ===== NAVIGATION ===== */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(2, 7, 10, 0.7);
-  padding: 1em;
+  background: rgba(2, 7, 10, 0.65);
+  padding: 1rem 2rem;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   z-index: 1000;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 nav a {
-  color: #FBFAF3;
+  color: #FFFFFF;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: all 0.3s ease;
 }
+
 nav a:hover {
   color: #02c6b0;
 }
 
-/* Hero Section */
+/* ===== HERO ===== */
 #hero {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 5rem 2rem;
-  position: relative;
+  padding: 6rem 2rem 4rem;
 }
 
 .hero-content {
-  max-width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
 #animatedName {
-  font-size: 5.5rem;
-  font-weight: 600;
-  line-height: 1;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(8rem, 7vw, 5.5rem);
+  font-weight: 400;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.1em;
+  gap: 0.05em;
+  letter-spacing: 0.5px;
+  transform: scaleY(1.5);
+  text-transform: uppercase;
 }
 
 .hero-content p {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 1.2rem;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
-/* Glitch Letter Animation */
+/* ===== GLITCH EFFECT ===== */
 .glitch-text {
   position: relative;
   display: inline-block;
-  color: #FBFAF3;
+  color: #0A0C21;
   animation: glitch-fade-in 0.6s ease forwards;
 }
 
@@ -105,24 +122,24 @@ nav a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  color: #00ffff;
   opacity: 0.8;
   pointer-events: none;
 }
 
 .glitch-text::before {
+  color: #0A0C21;
   transform: translate(1px, -1px);
 }
 .glitch-text::after {
-  color: #ff0000;
+  color: #FFFFFF;
   transform: translate(-1px, 1px);
 }
 
 .glitch-text:hover::before {
-  animation: glitch 0.5s infinite linear;
+  animation: glitch 0.4s infinite linear;
 }
 .glitch-text:hover::after {
-  animation: glitch 0.5s infinite linear reverse;
+  animation: glitch 0.4s infinite linear reverse;
 }
 
 @keyframes glitch {
@@ -139,23 +156,23 @@ nav a:hover {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Section General */
+/* ===== SECTIONS GENERAL ===== */
 section {
   padding: 6rem 2rem 4rem;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* Section Headers */
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
+  letter-spacing: 0.8px;
 }
 
-/* Fade-In Animation */
+/* ===== FADE IN ANIMATION ===== */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -166,27 +183,85 @@ h2 {
   transform: translateY(0);
 }
 
-/* Skills */
+/* ===== ABOUT SECTION ===== */
+#about p {
+  font-size: 1.1rem;
+  max-width: 750px;
+  line-height: 1.7;
+  text-align: center;
+  opacity: 0.85;
+}
+
+/* ===== SKILLS SECTION ===== */
 ul.skills {
   list-style: none;
   padding: 0;
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-}
-ul.skills li {
-  padding: 0.6rem 1.2rem;
-  background: rgba(251, 250, 243, 0.1);
-  border: 1px solid rgba(251, 250, 243, 0.2);
-  border-radius: 10px;
+  max-width: 900px;
 }
 
-/* Footer */
+ul.skills li {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  background: rgba(251, 250, 243, 0.08);
+  border: 1px solid rgba(251, 250, 243, 0.2);
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+ul.skills li:hover {
+  background: rgba(2, 198, 176, 0.2);
+}
+
+/* ===== CONTACT SECTION ===== */
+#contact .glass-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2rem;
+  max-width: 700px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+#contact p {
+  margin: 1rem 0 2rem;
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.buttons a {
+  text-decoration: none;
+  background: #02c6b0;
+  color: #02070A;
+  padding: 0.75rem 1.6rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.buttons a:hover {
+  background: #00a896;
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
 footer {
   padding: 2rem;
   text-align: center;
-  color: #888;
+  color: #aaa;
   font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
