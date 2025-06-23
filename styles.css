@@ -238,9 +238,9 @@ footer {
   nav {
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: space-around;
-    padding: 0.8rem 1rem;
-    gap: 0.5rem;
+    justify-content: center;
+    padding: 0.6rem 0.6rem;
+    gap: 0.3rem;
     overflow-x: auto;
     scrollbar-width: none; /* Firefox */
   }
@@ -250,35 +250,43 @@ footer {
   }
 
   nav a {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     white-space: nowrap;
-    padding: 0.4rem 0.6rem;
+    padding: 0.3rem 0.4rem;
   }
 
   #animatedName {
-    font-size: 2.2rem;
+    font-size: 2rem;
     white-space: normal;
   }
 
   .hero-content p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .buttons {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.7rem;
   }
 
   section {
-    padding: 4rem 1rem;
+    padding: 3.5rem 1rem;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   ul.skills li {
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.9rem;
+  }
+
+  #contact .glass-box {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 90%;
+    box-sizing: border-box;
   }
 }
