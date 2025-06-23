@@ -10,6 +10,24 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .hero-image-wrapper {
+      width: 100%;
+      max-width: 1100px;
+      aspect-ratio: 27 / 10;
+      margin: 0 auto 1.5rem;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -34,11 +52,15 @@
 
   <!-- Hero Section -->
   <section id="hero">
-    <div class="hero-content">
-      <h1 id="animatedName" class="glitch-text-container"></h1>
-      <p>Head of IT • Torero Corporation & Metropoli Fashions Pvt. Ltd</p>
+  <div class="hero-content">
+    <!-- Hero Image -->
+    <div class="hero-image-wrapper">
+      <img src="hero-banner.png" alt="Hero Banner" class="hero-image" />
     </div>
-  </section>
+    <h1 id="animatedName" class="glitch-text-container"></h1>
+    <p>Head of IT • Torero Corporation & Metropoli Fashions Pvt. Ltd</p>
+  </div>
+</section>
 
   <!-- About -->
   <section id="about" class="fade-in">
