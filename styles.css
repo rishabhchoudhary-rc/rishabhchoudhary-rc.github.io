@@ -76,14 +76,14 @@ nav a:hover {
   color: #02c6b0;
 }
 
-/* ===== HERO ===== */
+/* ===== HERO SECTION ===== */
 #hero {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 6.5rem 2rem 4rem;
+  padding: 6rem 2rem 4rem;
 }
 
 .hero-content {
@@ -92,25 +92,29 @@ nav a:hover {
   padding: 0 1rem;
 }
 
-/* ===== HERO IMAGE WRAPPER ===== */
 .hero-image-wrapper {
   width: 100%;
-  max-width: 1100px;
-  aspect-ratio: 27 / 10;
+  max-width: 900px;
   margin: 0 auto 2rem;
   overflow: hidden;
-  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 16px;
+  padding: 0 1rem;
 }
 
 .hero-image {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  display: block;
-  border-radius: 12px;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
 }
 
 #animatedName {
@@ -133,7 +137,7 @@ nav a:hover {
   padding: 0 1rem;
 }
 
-/* ===== SECTIONS GENERAL ===== */
+/* ===== SECTION STYLES ===== */
 section {
   padding: 6rem 2rem 4rem;
   min-height: 80vh;
@@ -150,7 +154,7 @@ h2 {
   text-align: center;
 }
 
-/* ===== FADE IN ANIMATION ===== */
+/* ===== FADE IN ===== */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -217,7 +221,7 @@ ul.skills li:hover {
   opacity: 0.85;
 }
 
-/* ==== BUTTONS ==== */
+/* ===== BUTTONS ===== */
 .buttons {
   display: flex;
   flex-direction: column;
@@ -276,16 +280,6 @@ footer {
     padding: 0.3rem 0.4rem;
   }
 
-  #hero {
-    padding: 7rem 1rem 3rem;
-  }
-
-  .hero-image-wrapper {
-    aspect-ratio: 16 / 9;
-    padding: 0 1rem;
-    margin-bottom: 1.5rem;
-  }
-
   #animatedName {
     font-size: 2rem;
     white-space: normal;
@@ -319,5 +313,17 @@ footer {
     width: 100%;
     max-width: 90%;
     box-sizing: border-box;
+  }
+
+  .hero-image-wrapper {
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 1.8rem;
+  }
+
+  .hero-image {
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
   }
 }
